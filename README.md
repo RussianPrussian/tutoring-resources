@@ -6,7 +6,7 @@
 | Test      | Passage Links |
 | ----------- | ----------- |
 | [SAT Practice Test][pt8] | {::nomarkdown}<ul><li>{:/}[Angel's Game][angelsgame]{::nomarkdown}</li><li>{:/}[Why Null Results][whynullresults]{::nomarkdown}</li><li>{:/}[Salt Stretch Nanoworld][saltstretch]{::nomarkdown}</li><li>{:/}[Lincoln-Douglas Debates][lincolndouglas]{::nomarkdown}</li><li>{:/}[What A Plant Knows][plantknows]{::nomarkdown}</ul>{:/}  |
-| Dec 2019  | <ul><li>[O' Pioneers][cathers]</li><li>[Free to Choose][freetochoose]</li></ul>|
+| Dec 2019  | {::nomarkdown}<ul><li>{:/}[O' Pioneers][cathers]{::nomarkdown}</li><li>{:/}[Free to Choose][freetochoose]{::nomarkdown}</li></ul>{:/}|
 
 [pt8]: https://collegereadiness.collegeboard.org/pdf/sat-practice-test-8.pdf
 [angelsgame]: https://kingauthor.net/books/Carlos%20Ruiz%20Zafon/The%20Angel's%20Game/The%20Angel's%20Game%20-%20Carlos%20Ruiz%20Zafon.pdf
