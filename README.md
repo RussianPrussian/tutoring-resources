@@ -5,7 +5,7 @@
 
 | Test      | Passage Links |
 | ----------- | ----------- |
-| [SAT Practice Test][pt8] | <table><tbody><tr><td>[Angel's Game][angelsgame]</td></tr><tr><td>[Why Null Results][whynullresults]</td></tr><tr><td>[Salt Stretch Nanoworld][saltstretch]</td></tr><tr><td>[Lincoln-Douglas Debates][lincolndouglas]</td></tr><tr><td>[What A Plant Knows][plantknows]</td></tr></tbody></table>  |
+| [SAT Practice Test][pt8] | {::nomarkdown}<ul><li>[Angel's Game][angelsgame]</li><li>[Why Null Results][whynullresults]</li><li>[Salt Stretch Nanoworld][saltstretch]</li><li>[Lincoln-Douglas Debates][lincolndouglas]</li><li>[What A Plant Knows][plantknows]</ul>{:/}  |
 | Dec 2019  | <ul><li>[O' Pioneers][cathers]</li><li>[Free to Choose][freetochoose]</li></ul>|
 
 [pt8]: https://collegereadiness.collegeboard.org/pdf/sat-practice-test-8.pdf
