@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{indentfirst}
+
+\title{Rockets}
+\author{Alex Katsenelenbogen}
+
+\setlength{\voffset}{-0.75in}
+
+\begin{document}
+\begin{center}
+      \Large\textbf{Rockets (Alternative Derivation)}\\
+      \large\textit{Prepared by Alex Katsenelenbogen}
+   \end{center}
+  
+\newcommand{\dpdt}{\frac{dp}{dt}}
+\newcommand{\dvdt}[1]{\frac{dv_{#1}}{dt}}
+\newcommand{\dmdt}[1]{\frac{dm_{#1}}{dt}}
+\newcommand{\frocketOnFuel}{F_{rocket\ on\ fuel}}
+\newcommand{\ffuelOnRocket}{F_{fuel\ on\ rocket}}
+\newcommand{\Fext}{F_{ext}}
+
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{1em}
+
+The textbook gives a derivation of the rocket using conservation of momentum. This is actually the case for at least three textbooks that I know of.  Here is an alternative derivation which instead relies on forces. 
+\section{Newton's Second Law - Mass Not Constant}
+\par 
+To begin with, we will recognize that though traditionally, we use $F_{ext}=ma$ as Newton's Second Law, it can more accurately be stated as follows:
+$$\Fext = \dpdt.$$
+
+Since $p=mv$, we can take the derivative of both sides to find $\dpdt$.
+When mass is constant, taking the derivative will of course give us
+$$\frac{dp}{dt} = m\frac{dv}{dt}$$ such that
+$$\Fext = m\frac{dv}{dt}$$
+However, when mass is allowed to change, we must employ the product rule when taking the derivative of $p$:
+
+\begin{equation}
+\Fext = \dpdt = v\frac{dm}{dt}+m\frac{dv}{dt}
+\end{equation}
+\par
+
+\section{Force On the Entire Rocket-Fuel system}
+
+Consider some instant in time when a small piece of fuel leaves the rocket. If we were to take both the mass of the fuel and of the rocket, then the total mass of the system would be constant and there would, in a vacuum, be 0 external force on the system. The center of mass of the rocket-fuel system would obey Newton's second law as initially conceived: $F_{ext}=ma$. Here mass  represents the total mass of the system and is therefore constant. Unfortunately, this does not tell us very much!\par
+The total acceleration of the system is necessarily 0 since the net external force is 0., So, all we know is that the center of mass of this system must be moving at a constant velocity. But the acceleration of the \textit{rocket} is \textit{not} 0!\par
+To understand the motion of the rocket, itself, we'll need to consider each piece of the system as a system to itself and consider the "external" forces on each of those components.
+
+\section{Forces on Each Rocket-Fuel Component}
+Note that the rocket and fuel exert equal and opposite forces on one another when they are separated. Thus, using equation (1) we can describe the forces for each component as follows:
+\begin{equation}
+\frocketOnFuel = v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket}
+\end{equation}
+\begin{equation}
+\ffuelOnRocket= v_{fuel} \dmdt{fuel} + m_{fuel}  \dvdt{fuel}
+\end{equation}
+\begin{equation}
+\frocketOnFuel = -\ffuelOnRocket
+\end{equation}
+
+There are a few other relationships we'll want to recognize before we proceed further. 
+\begin{enumerate}
+\item If we define $v_{exhaust} = v_{ex}$ to be the velocity of the fuel \textit{in the frame of reference of the rocket}, then
+\begin{equation}
+v_{fuel} = v_{rocket} - v_{ex}
+\end{equation}
+\item Taking the derivative of both sides:
+$$\dvdt{fuel} = \dvdt{rocket} - \dvdt{ex}$$
+In the frame of reference of the rocket, the velocity of the fuel is constant; thus, $v_{ex}$ is constant and $\dvdt{ex} = 0$. So,
+\begin{equation}
+\dvdt{fuel} = \dvdt{rocket}
+\end{equation}
+\item We only consider the force between the rocket and some recently ejected fuel. The rest of the fuel that has been ejected at some point in the past is no longer in contact with the rocket and plays no role in the force interaction. Thus, 
+\begin{equation}
+m_{fuel} = 0
+\end{equation}
+\item In order for mass to be conserved across the whole system, the rate at which the mass of fuel increases must be the same as the rate at which the mass of the rocket decreases. Thus, 
+\begin{equation}
+\dmdt{fuel} = - \dmdt{rocket}
+\end{equation}
+
+\end{enumerate}
+
+
+\section{Putting the Pieces Together (Doing the \\ Algebra)}
+We're now at a point where can put the pieces together. We'll start by using the fact that the forces between the fuel and the recently ejected fuel are equal and opposite. This means that 
+$$v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket} = - ( v_{fuel} \dmdt{fuel} + m_{fuel}  \dvdt{fuel})$$
+
+$$v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket} = - v_{fuel} \dmdt{fuel} - m_{fuel}  \dvdt{fuel}$$
+
+Using equation (6):
+
+$$v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket} = - v_{fuel} \dmdt{fuel} - m_{fuel}  \dvdt{rocket}$$
+
+Using equation (8)
+
+$$v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket} = v_{fuel} \dmdt{rocket} - m_{fuel}  \dvdt{rocket}$$
+
+Applying equation (7) where we consider the fuel mass vanishingly small:
+
+$$v_{rocket} \dmdt{rocket} + m_{rocket}  \dvdt{rocket} = v_{fuel} \dmdt{rocket}$$
+
+
+and regrouping some terms:
+
+$$(v_{rocket} - v_{fuel})\dmdt{rocket} = - m_{rocket}\dvdt{rocket} = 0$$
+
+Using equation (5)
+
+$$v_{ex}\dmdt{rocket} = - m_{rocket}\dvdt{rocket}$$
+
+\begin{equation}
+-v_{ex}\dmdt{rocket} = m_{rocket}\dvdt{rocket}
+\end{equation}
+
+\section {Interpreting the Result}
+For simplicity we'll now just assume the mass and velocities represent that those of the rocket.
+
+\begin{equation}
+-v_{ex}\frac{dm}{dt} = m\frac{dv}{dt} = ma
+\end{equation}\par
+If we go back to the more "comfortable" definition for newton's second law, where $F=ma$.
+We can interpret this equation such that the term on the left is a contributing "thrust" force to the net force on the right. That is, the thrust from the exhaust supplies the acceleration of the rocket.
+
+
+\end{document}
